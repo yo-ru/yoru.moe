@@ -28,4 +28,12 @@
     // MUSIC
     $('#music').prop("volume", 0.1); // set music volume
 
+    // PARALLAX
+    $('.home-info').tilt({
+      maxTilt: 20, // max tilt
+      scale: 1.3, // zoom scale
+      perspective: 700, // tilt agressiveness
+      speed: 3000, // enter/exit anim speed
+    });
+
 })(jQuery);
