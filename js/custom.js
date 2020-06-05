@@ -22,7 +22,7 @@
         firstTransition: 'fade', // fade into first slide
         firstTransitionDuration: 5000, // ^ lasts five seconds
         transition: 'blur', // blur transition for rest of slides
-        transitionDuration: 2000 // ^ lasts 2 seconds
+        transitionDuration: 2000 // ^ lasts two seconds
     });
 
     // MUSIC
