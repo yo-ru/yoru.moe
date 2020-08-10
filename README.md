@@ -1,5 +1,5 @@
 # my-website
-My personal website: https://kokoro.pw/
+My personal website: https://yoru.moe/
 
 ### Dependencies
 * [FontAwesome](https://github.com/FortAwesome/Font-Awesome) (v4.7.0)
