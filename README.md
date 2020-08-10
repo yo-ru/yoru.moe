@@ -1,4 +1,4 @@
-# my-website
+# yoru.moe
 My personal website: https://yoru.moe/
 
 ### Dependencies
