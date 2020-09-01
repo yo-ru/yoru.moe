@@ -1,5 +1,6 @@
 # yoru.moe
 My personal website: https://yoru.moe/
+Hosted on GitHub Pages using a custom domain.
 
 ### Dependencies
 * [FontAwesome](https://github.com/FortAwesome/Font-Awesome) (v4.7.0)
