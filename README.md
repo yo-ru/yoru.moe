@@ -1,5 +1,5 @@
 # yoru.moe
-My personal website: https://yoru.moe/
+My personal website: https://yoru.moe/  
 Hosted on GitHub Pages using a custom domain.
 
 ### Dependencies
