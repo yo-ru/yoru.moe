@@ -212,6 +212,12 @@
     transition: 0.5s;
   }
 
+  .social .osu a:hover span i {
+    color: #fb2bff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
   .now-playing {
     position: absolute;
     left: 0;
