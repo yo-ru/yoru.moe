@@ -184,38 +184,40 @@
     color: #fff;
   }
 
+  /* FADE-IN */
+  .social a:hover span i {
+    -webkit-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+  }
+
+  /* FADE-OUT */
+  .social a span i {
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+  }
+
   .social .instagram a:hover span i {
     background: #d6249f;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
   }
 
   .social .twitter a:hover span i {
     color: #1da1f2;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
   }
 
   .social .youtube a:hover span i {
     color: #ff0000;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
   }
 
   .social .github a:hover span i {
     color: #333;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
   }
 
   .social .osu a:hover span i {
     color: #fb2bff;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
   }
 
   .now-playing {
