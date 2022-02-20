@@ -7,7 +7,7 @@
       $('.preloader').fadeOut(1000); // set duration in brackets    
     });
 
-    // ABOUT SLIDER
+    // BACKGROUND SLIDER
     $('body').vegas({
         slides: [
             { src: 'images/slides/1.jpg' },
@@ -29,11 +29,16 @@
     $('#music').prop("volume", 0.1); // set music volume
 
     // PARALLAX
-    $('.home-info').tilt({
+    /*$('.home-info').tilt({
       maxTilt: 20, // max tilt
       scale: 1.3, // zoom scale
       perspective: 700, // tilt agressiveness
       speed: 3000, // enter/exit anim speed
-    });
+    });*/
 
 })(jQuery);
+
+function copyDiscord() {
+  navigator.clipboard.writeText("Yoru#9197");
+  alert("Copied! Yoru#9197");
+}

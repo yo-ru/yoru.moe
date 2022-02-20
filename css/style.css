@@ -196,20 +196,16 @@
     transition: 0.5s ease-out;
   }
 
-  .social .instagram a:hover span i {
-    background: #d6249f;
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .social .discord a:hover span i {
+    color: #5865F2;
   }
 
   .social .twitter a:hover span i {
     color: #1da1f2;
   }
 
-  .social .youtube a:hover span i {
-    color: #ff0000;
+  .social .vrchat a:hover span i {
+    color: yellow;
   }
 
   .social .github a:hover span i {
@@ -261,7 +257,6 @@
       opacity: 1;
     }
   }
-
 
   /*---------------------------------------
      RESPONSIVE STYLES              
