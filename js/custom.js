@@ -4,7 +4,7 @@
   "use strict";
 
     // PRE LOADER
-    $(window).load(function(){
+    $(window).load(function() {
       $('.preloader').fadeOut(1000); // set duration in brackets    
     });
 
@@ -29,6 +29,12 @@
     // MUSIC
     $('#music').prop('volume', 0.1); // set music volume
 
+    // MUSIC INTERACTION EVENT
+    $(document).one('click', function() {
+      $('#now-playing').css({'display': ''});
+      $('#music').trigger('play');
+    });
+
     // PARALLAX
     /*$('.home-info').tilt({
       maxTilt: 20, // max tilt
@@ -43,14 +49,3 @@ function copyDiscord() {
   navigator.clipboard.writeText('Yoru#9197');
   alert('Copied! Yoru#9197');
 }
-
-// MUSIC INTERACTION EVENT
-document.addEventListener('click', function() {
-  var text = document.getElementById('now-playing');
-  var player = document.getElementById('music');
-
-  text.style.cssText = "";
-  player.play();
-
-  document.removeEventListener('click', this);
-}, { once: true });
