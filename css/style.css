@@ -216,7 +216,7 @@
     color: #fb2bff;
   }
 
-  .now-playing {
+  #now-playing {
     position: absolute;
     left: 0;
     right: 0;
@@ -224,7 +224,7 @@
     margin-right: auto;
   }
 
-  .now-playing h2 {
+  #now-playing h2 {
     color: #fff;
   }
 

@@ -1,3 +1,4 @@
+// jQuery
 (function ($) {
 
   "use strict";
@@ -26,7 +27,7 @@
     });
 
     // MUSIC
-    $('#music').prop("volume", 0.1); // set music volume
+    $('#music').prop('volume', 0.1); // set music volume
 
     // PARALLAX
     /*$('.home-info').tilt({
@@ -38,7 +39,17 @@
 
 })(jQuery);
 
+// Copy Discord to Clipboard
 function copyDiscord() {
-  navigator.clipboard.writeText("Yoru#9197");
-  alert("Copied! Yoru#9197");
+  navigator.clipboard.writeText('Yoru#9197');
+  alert('Copied! Yoru#9197');
 }
+
+// Music Interaction Event
+document.addEventListener('click', function() {
+  var text = document.getElementById('now-playing');
+  var player = document.getElementById('music');
+
+  text.style.cssText = "";
+  player.play();
+}, { once: true });
