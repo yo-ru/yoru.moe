@@ -36,20 +36,21 @@
       perspective: 700, // tilt agressiveness
       speed: 3000, // enter/exit anim speed
     });*/
-
 })(jQuery);
 
-// Copy Discord to Clipboard
+// COPY DISCORD TO CLIPBOARD
 function copyDiscord() {
   navigator.clipboard.writeText('Yoru#9197');
   alert('Copied! Yoru#9197');
 }
 
-// Music Interaction Event
+// MUSIC INTERACTION EVENT
 document.addEventListener('click', function() {
   var text = document.getElementById('now-playing');
   var player = document.getElementById('music');
 
   text.style.cssText = "";
   player.play();
+
+  document.removeEventListener('click', this);
 }, { once: true });
