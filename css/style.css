@@ -235,21 +235,27 @@
     color: #9146FF;
   }
 
-  #now-playing {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #now-playing h2 {
+  #now-playing h4 {
     color: #fff;
   }
 
+  #track-selector {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+  }
+
+  #track-selector > .social {
+    margin-bottom: 0;
+  }
+
   .text-focus-in {
-  -webkit-animation: text-focus-in 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2 alternate both;
-          animation: text-focus-in 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) 2 alternate both;
+  -webkit-animation: text-focus-in 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+          animation: text-focus-in 4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
   }
 
   @-webkit-keyframes text-focus-in {

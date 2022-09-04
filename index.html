@@ -42,7 +42,6 @@
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
 						<!-- NOW PLAYING -->
-						<div id="now-playing" class="text-focus-in" style="display: none;"></div>
 						<div class="home-info">
 							<h1>
 								<b>Yoru</b>
@@ -97,6 +96,32 @@
 									</a>
 								</li>
 							</ul>
+						</div>
+						<div id="track-selector" class="text-focus-in" style="display: none;">
+							<ul class="social">
+								<li>
+									<a onclick="playPrevSong()">
+										<span>
+											<i class="fa-solid fa-backward"></i>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a onclick="playPauseSong()">
+										<span>
+											<i class="fa-solid fa-play"></i>
+										</span>
+									</a>
+								</li>
+								<li>
+									<a onclick="playNextSong()">
+										<span>
+											<i class="fa-solid fa-forward"></i>
+										</span>
+									</a>
+								</li>
+							</ul>
+							<div id="now-playing" class="text-focus-in"></div>
 						</div>
 					</div>
 				</div>

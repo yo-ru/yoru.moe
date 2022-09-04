@@ -36,8 +36,8 @@
 
     // MUSIC INTERACTION EVENT
     $(document).one('click', function() {
-      $('#now-playing').css({'display': ''});
-      queuePlaylist();
+      $('#track-selector').css({'display': ''});
+      startPlayer();
     });
 
     // PARALLAX
@@ -55,40 +55,72 @@ function copyDiscord() {
   alert('Copied! Yoru#9197');
 }
 
+// MUSIC PLAYER
+const song_locations = [
+  'music/d4vd_romantic_homicide.mp3',
+  'music/in_love_with_a_ghost_flowers.mp3',
+  'music/powfu_death_bed.mp3'
+];
+const song_titles = [
+  'd4vd - Romantic Homicide',
+  'In Love With A Ghost - Flowers',
+  'Powfu - Death Bed'
+];
+let currentSongIndex = 0;
+let now_playing = document.getElementById('now-playing');
+let music = document.getElementById('music');
 
-function queuePlaylist() {
-  const song_locations = [
-    'music/d4vd_romantic_homicide.mp3',
-    'music/in_love_with_a_ghost_flowers.mp3',
-    'music/powfu_death_bed.mp3'
-  ];
-  const song_titles = [
-    'd4vd - Romantic Homicide',
-    'In Love With A Ghost - Flowers',
-    'Powfu - Death Bed'
-  ];
-  let currentSongIndex = 0;
+function playNextSong() {
+  // don't skip into oblivion
+  if (!(currentSongIndex < song_locations.length)) {
+    return;
+  }
 
-  function playNextSong() {
-    let now_playing = document.getElementById('now-playing');
-    let music = document.getElementById('music');
+  // set now playing
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h4>';
 
-    // set now playing
-    now_playing.innerHTML = '<h2><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h2>';
+  // replay animation
+  now_playing.style.animation = 'none';
+  now_playing.offsetHeight;
+  now_playing.style.animation = null;
 
-    if (!(currentSongIndex == 0)) {
-      now_playing.style.animation = 'none';
-      now_playing.offsetHeight;
-      now_playing.style.animation = null;
-    }
+  // play song
+  music.src =  song_locations[currentSongIndex];
+  music.currentTime = 0;
+  music.play();
+  currentSongIndex++;
+};
 
-    // play song
-    music.src =  song_locations[currentSongIndex];
-    music.currentTime = 0;
+function playPrevSong() {
+  // don't skip into oblivion
+  if (currentSongIndex == 1) {
+    return;
+  }
+
+  // set now playing
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex-=2] + '</h4>';
+
+  // replay animation
+  now_playing.style.animation = 'none';
+  now_playing.offsetHeight;
+  now_playing.style.animation = null;
+
+  // play song
+  music.src =  song_locations[currentSongIndex];
+  music.currentTime = 0;
+  music.play();
+  currentSongIndex++;
+};
+
+function playPauseSong() {
+  if (!music.paused) {
+    music.pause();
+  } else {
     music.play();
-    currentSongIndex++;
-  };
+  }
+}
 
+function startPlayer() {
   if (song_locations.length) {  
     playNextSong();
 
