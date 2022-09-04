@@ -37,7 +37,7 @@
     // MUSIC INTERACTION EVENT
     $(document).one('click', function() {
       $('#now-playing').css({'display': ''});
-      $('#music').trigger('play');
+      queuePlaylist();
     });
 
     // PARALLAX
@@ -54,7 +54,25 @@ function copyDiscord() {
   navigator.clipboard.writeText('Yoru#9197');
   alert('Copied! Yoru#9197');
 }
+
+
+function queuePlaylist() {
+  const song_locations = [
+    'music/d4vd_romantic_homicide.mp3',
+    'music/in_love_with_a_ghost_flowers.mp3',
+    'music/powfu_death_bed.mp3'
+  ];
+  const song_titles = [
+    'd4vd - Romantic Homicide',
+    'In Love With A Ghost - Flowers',
+    'Powfu - Death Bed'
+  ];
+  let currentSongIndex = 0;
+
+  function playNextSong() {
     let now_playing = document.getElementById('now-playing');
+    let music = document.getElementById('music');
+
     // set now playing
     now_playing.innerHTML = '<h2><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h2>';
 
@@ -63,3 +81,21 @@ function copyDiscord() {
       now_playing.offsetHeight;
       now_playing.style.animation = null;
     }
+
+    // play song
+    music.src =  song_locations[currentSongIndex];
+    music.currentTime = 0;
+    music.play();
+    currentSongIndex++;
+  };
+
+  if (song_locations.length) {  
+    playNextSong();
+
+    music.addEventListener('ended', function() {
+      if (currentSongIndex < song_locations.length) {
+        playNextSong();
+      }
+    });
+  }
+}
