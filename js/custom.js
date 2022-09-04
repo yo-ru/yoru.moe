@@ -11,11 +11,16 @@
     // BACKGROUND SLIDER
     $('body').vegas({
         slides: [
-            { src: 'images/slides/1.jpg' },
-            { src: 'images/slides/2.jpg' },
-            { src: 'images/slides/3.jpg' },
-            { src: 'images/slides/4.jpg' },
-            { src: 'images/slides/5.jpg' }
+            { src: 'images/slides/1.jpg'  },
+            { src: 'images/slides/2.jpg'  },
+            { src: 'images/slides/3.jpg'  },
+            { src: 'images/slides/4.jpg'  },
+            { src: 'images/slides/5.jpg'  },
+            { src: 'images/slides/6.webp' },
+            { src: 'images/slides/7.jpg'  },
+            { src: 'images/slides/8.webp' },
+            { src: 'images/slides/9.jpg'  },
+            { src: 'images/slides/10.webp'}
         ],
         delay: 7000, // delay between slide transition
         timer: false, // disable timer
