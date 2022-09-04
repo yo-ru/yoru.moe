@@ -54,3 +54,12 @@ function copyDiscord() {
   navigator.clipboard.writeText('Yoru#9197');
   alert('Copied! Yoru#9197');
 }
+    let now_playing = document.getElementById('now-playing');
+    // set now playing
+    now_playing.innerHTML = '<h2><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h2>';
+
+    if (!(currentSongIndex == 0)) {
+      now_playing.style.animation = 'none';
+      now_playing.offsetHeight;
+      now_playing.style.animation = null;
+    }
