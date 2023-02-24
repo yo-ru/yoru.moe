@@ -58,12 +58,12 @@ function copyDiscord() {
 // MUSIC PLAYER
 const song_locations = [
   'music/d4vd_romantic_homicide.mp3',
-  'music/in_love_with_a_ghost_flowers.mp3',
+  'music/yagih_mael_fly_me_to_the_moon.mp3',
   'music/powfu_death_bed.mp3'
 ];
 const song_titles = [
   'd4vd - Romantic Homicide',
-  'In Love With A Ghost - Flowers',
+  'Yagih Mael - Fly Me To The Moon',
   'Powfu - Death Bed'
 ];
 let currentSongIndex = 0;
