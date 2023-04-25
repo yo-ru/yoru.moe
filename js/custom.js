@@ -58,13 +58,15 @@ function copyDiscord() {
 // MUSIC PLAYER
 const song_locations = [
   'music/d4vd_romantic_homicide.mp3',
-  'music/in_love_with_a_ghost_flowers.mp3',
-  'music/powfu_death_bed.mp3'
+  'music/fly_me_to_the_moon_lofi_cover.mp3',
+  'music/powfu_death_bed.mp3',
+  'music/mirai_milkoi_miyuki.mp3'
 ];
 const song_titles = [
   'd4vd - Romantic Homicide',
-  'In Love With A Ghost - Flowers',
-  'Powfu - Death Bed'
+  'Frank Sinatra - Fly Me To The Moon (Lofi Cover)',
+  'Powfu - Death Bed',
+  'Miraie & Milkoi - 『 ミユキ 』'
 ];
 let currentSongIndex = 0;
 let now_playing = document.getElementById('now-playing');
