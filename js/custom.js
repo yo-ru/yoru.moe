@@ -73,7 +73,7 @@ let music = document.getElementById('music');
 function playNextSong() {
   // don't skip into oblivion
   if (!(currentSongIndex < song_locations.length)) {
-    return;
+    currentSongIndex = 0;
   }
 
   // set now playing
@@ -94,7 +94,7 @@ function playNextSong() {
 function playPrevSong() {
   // don't skip into oblivion
   if (currentSongIndex == 1) {
-    return;
+    currentSongIndex = song_titles.length + 1;
   }
 
   // set now playing
