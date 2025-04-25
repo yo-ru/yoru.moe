@@ -1,5 +1,5 @@
 # yoru.moe
-My personal website: https://夜.moe  
+My personal website: https://yoru.moe  
 Hosted on GitHub Pages using a custom domain.
 
 ### Dependencies
@@ -8,3 +8,6 @@ Hosted on GitHub Pages using a custom domain.
 * [jQuery](https://github.com/jquery/jquery) (v2.2.3)
 * [Tilt.js](https://github.com/gijsroge/tilt.js) (v1.2.1)
 * [Vegas](https://github.com/jaysalvat/vegas) (v2.2.1)
+
+### Why is it forked?
+Uh. I lost it :^)
