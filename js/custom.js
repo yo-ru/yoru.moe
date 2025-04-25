@@ -51,8 +51,8 @@
 
 // COPY DISCORD TO CLIPBOARD
 function copyDiscord() {
-  navigator.clipboard.writeText('Yoru#9197');
-  alert('Copied! Yoru#9197');
+  navigator.clipboard.writeText('yo.ru');
+  alert('Copied! yo.ru');
 }
 
 // MUSIC PLAYER
@@ -73,11 +73,8 @@ let music = document.getElementById('music');
 function playNextSong() {
   // don't skip into oblivion
   if (!(currentSongIndex < song_locations.length)) {
-    currentSongIndex = 0;
+    return;
   }
-
-  // set now playing
-  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h4>';
 
   // replay animation
   now_playing.style.animation = 'none';
@@ -89,16 +86,16 @@ function playNextSong() {
   music.currentTime = 0;
   music.play();
   currentSongIndex++;
+
+  // set now playing
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + " (" + music.currentTime + "/" + music.duration + ')</h4>';
 };
 
 function playPrevSong() {
   // don't skip into oblivion
   if (currentSongIndex == 1) {
-    currentSongIndex = song_titles.length + 1;
+    return;
   }
-
-  // set now playing
-  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex-=2] + '</h4>';
 
   // replay animation
   now_playing.style.animation = 'none';
@@ -110,24 +107,29 @@ function playPrevSong() {
   music.currentTime = 0;
   music.play();
   currentSongIndex++;
+
+  // set now playing
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + " (" + music.currentTime + "/" + music.duration + ')</h4>';
 };
 
 function playPauseSong() {
   if (!music.paused) {
     music.pause();
+    $('#track-selector > ul > li:nth-child(2) > a > span > i').removeClass('fa-pause');
+    $('#track-selector > ul > li:nth-child(2) > a > span > i').addClass('fa-play');
   } else {
     music.play();
+    $('#track-selector > ul > li:nth-child(2) > a > span > i').removeClass('fa-play');
+    $('#track-selector > ul > li:nth-child(2) > a > span > i').addClass('fa-pause');
   }
 }
 
 function startPlayer() {
-  if (song_locations.length) {  
+  if (song_locations.length) {
     playNextSong();
 
     music.addEventListener('ended', function() {
-      if (currentSongIndex < song_locations.length) {
-        playNextSong();
-      }
+      playNextSong();
     });
   }
 }
