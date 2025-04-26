@@ -88,7 +88,7 @@ function playNextSong() {
   currentSongIndex++;
 
   // set now playing
-  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + " (" + music.currentTime + "/" + music.duration + ')</h4>';
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h4>';
 };
 
 function playPrevSong() {
@@ -109,7 +109,7 @@ function playPrevSong() {
   currentSongIndex++;
 
   // set now playing
-  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + " (" + music.currentTime + "/" + music.duration + ')</h4>';
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h4>';
 };
 
 function playPauseSong() {
