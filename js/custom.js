@@ -82,6 +82,9 @@ function playNextSong() {
     return;
   }
 
+  // set now playing
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h4>';
+  
   // replay animation
   now_playing.style.animation = 'none';
   now_playing.offsetHeight;
@@ -92,9 +95,6 @@ function playNextSong() {
   music.currentTime = 0;
   music.play();
   currentSongIndex++;
-
-  // set now playing
-  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h4>';
 };
 
 function playPrevSong() {
@@ -103,6 +103,9 @@ function playPrevSong() {
     return;
   }
 
+  // set now playing
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex-=2] + '</h4>';
+
   // replay animation
   now_playing.style.animation = 'none';
   now_playing.offsetHeight;
@@ -113,9 +116,6 @@ function playPrevSong() {
   music.currentTime = 0;
   music.play();
   currentSongIndex++;
-
-  // set now playing
-  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex-=2] + '</h4>';
 };
 
 function playPauseSong() {
