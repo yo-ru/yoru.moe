@@ -63,11 +63,13 @@ function copyDiscord() {
 
 // MUSIC PLAYER
 const song_locations = [
+  'music/miraie_the_place_you_promised_to_show_me.mp3',
   'music/d4vd_romantic_homicide.mp3',
   'music/yagih_mael_fly_me_to_the_moon.mp3',
   'music/powfu_death_bed.mp3'
 ];
 const song_titles = [
+  'Miraie - The Place You Promised To Show Me',
   'd4vd - Romantic Homicide',
   'Yagih Mael - Fly Me To The Moon',
   'Powfu - Death Bed'
