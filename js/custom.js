@@ -135,7 +135,9 @@ function startPlayer() {
     playNextSong();
 
     music.addEventListener('ended', function() {
-      playNextSong();
+      if (currentSongIndex < song_locations.length) {
+         playNextSong();
+       }
     });
   }
 }
