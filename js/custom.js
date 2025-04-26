@@ -115,7 +115,7 @@ function playPrevSong() {
   currentSongIndex++;
 
   // set now playing
-  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex] + '</h4>';
+  now_playing.innerHTML = '<h4><b>Now Playing:</b> ' + song_titles[currentSongIndex-=2] + '</h4>';
 };
 
 function playPauseSong() {
