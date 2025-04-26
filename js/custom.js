@@ -1,11 +1,17 @@
 // jQuery
 (function ($) {
 
-  "use strict";
-
-    // PRE LOADER
+  'use strict';
+    
     $(window).load(function() {
+      // PRE LOADER
       $('.preloader').fadeOut(1000); // set duration in brackets    
+
+      // DISABLE SELECTION
+      $('body').css('-webkit-user-select', 'none');
+      $('body').css('-moz-user-select', 'none');
+      $('body').css('-ms-user-select', 'none');
+      $('body').css('user-select', 'none');
     });
 
     // BACKGROUND SLIDER
